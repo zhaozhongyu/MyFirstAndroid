@@ -14,20 +14,20 @@
             android:label="FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FruitListView"
-            android:label="FruitListView">
-
-        </activity>
-        <activity android:name=".FruitRecycleView"
-            android:label="FruitRecycleView">
-
-        </activity>
-        <activity android:name=".SecondActivity" >
+        <activity
+            android:name=".FruitListView"
+            android:label="FruitListView"></activity>
+        <activity
+            android:name=".FruitRecycleView"
+            android:label="FruitRecycleView"></activity>
+        <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="com.zzy.myapplication1.ACTION_START" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -40,6 +40,11 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
