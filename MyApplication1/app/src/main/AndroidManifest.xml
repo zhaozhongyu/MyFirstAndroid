@@ -31,6 +31,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".cameraActivity"
+            android:label="cameraActivity"></activity>
 
         <receiver
             android:name=".MyReceiver"
@@ -45,6 +48,21 @@
             android:name=".MyService"
             android:enabled="true"
             android:exported="true"></service>
-    </application>
+        <provider
+            android:authorities="com.example.cameratest.provider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
 
+
+
+    </application>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>

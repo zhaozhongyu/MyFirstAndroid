@@ -47,5 +47,12 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Unbind Service"/>
+    <Button
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="相机"/>
+
 
 </LinearLayout>
